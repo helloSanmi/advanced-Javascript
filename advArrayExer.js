@@ -54,24 +54,15 @@ const array = [
       return num * 2;
   })
   
+ 
   //BONUS: create a new list with all user information, but add "!" to the end of each items they own.
-  const newList = [
-      {
-          username: 'johnbul',
-          team: 'purple',
-          score: 40,
-          items: ['book!', 'tape!']
-      },
-      {
-          username: 'george',
-          team: 'red',
-          score: 30,
-          items: ['ball', 'blade', 'pen']
-      },
-      {
-          username: 'muri',
-          team: 'green',
-          score: 29,
-          items: ['pen', 'ball']
-      }
-  ];
+const newList = [];
+array.forEach(user => {
+    newList.push({
+      ...array,
+      items: user.items.map(itemCont => itemCont + '!')
+    });
+  });
+
+ console.log(newList);
+
