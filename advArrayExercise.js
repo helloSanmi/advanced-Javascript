@@ -52,9 +52,8 @@ const array = [
       console.log(num, i);
     //   alert(num);
       return num * 2;
-  })
+  });
   
- 
   //BONUS: create a new list with all user information, but add "!" to the end of each items they own.
 const newList = [];
 array.forEach(user => {
@@ -66,3 +65,15 @@ array.forEach(user => {
 
  console.log(newList);
 
+//Create a new array, add school property, and delete score property
+const newList1 = [];
+array.forEach(content => {
+ let newArr = {
+    ...content,
+    school: 'USA College'
+  }
+  delete newArr.score;
+  newList1.push(newArr)
+});
+
+console.log(newList1);
